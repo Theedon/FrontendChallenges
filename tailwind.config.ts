@@ -18,13 +18,10 @@ const config: Config = {
       "grayish-blue": "hsl(220, 15%, 55%)",
       "dark-blue": "hsl(218, 44%, 22%)",
     },
-    fontSize: {
-      "15": "15px",
-    },
+
     fontFamily: {
       outfit: ["Outfit", "sans-serif"],
     },
-    fontWeight: { "400": "400", "700": "700" },
   },
   plugins: [],
 };
