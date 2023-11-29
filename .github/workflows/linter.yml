@@ -1,0 +1,19 @@
+name: Linter
+
+on:
+  push:
+    branches:
+      - "*"
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v2
+
+      - name: Install dependencies
+        uses: npm install
+
+      - name: Linter
+        uses: npm run lint
