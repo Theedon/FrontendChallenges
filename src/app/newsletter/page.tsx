@@ -1,7 +1,7 @@
-import listIcon from "@/src/assets/newsletter/icon-list.svg";
-import successIcon from "@/src/assets/newsletter/icon-success.svg";
-import desktopImage from "@/src/assets/newsletter/illustration-sign-up-desktop.svg";
-import mobileImage from "@/src/assets/newsletter/illustration-sign-up-desktop.svg";
+import listIcon from "@/assets/newsletter/icon-list.svg";
+import successIcon from "@/assets/newsletter/icon-success.svg";
+import desktopImage from "@/assets/newsletter/illustration-sign-up-desktop.svg";
+import mobileImage from "@/assets/newsletter/illustration-sign-up-desktop.svg";
 import Image from "next/image";
 
 function Newsletter() {
