@@ -1,4 +1,4 @@
-import QRComponent from "@/src/components/QRComponent";
+import QRComponent from "@/components/QRComponent";
 
 function QRPage() {
   return <QRComponent />;
