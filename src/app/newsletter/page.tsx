@@ -40,7 +40,7 @@ function Newsletter() {
     return false;
   };
   return (
-    <main className="flex flex-col rounded-2xl font-roboto sm:max-h-[70vh] sm:max-w-[100vh] sm:flex-row ">
+    <main className="flex flex-col rounded-2xl bg-newsletterColors-white p-4 font-roboto sm:max-h-[70vh] sm:max-w-[100vh] sm:flex-row ">
       <section className="flex flex-1 sm:hidden">
         <Image src={mobileImage} alt="image showing sign in" />
       </section>
