@@ -1,16 +1,18 @@
 "use client";
 import listIcon from "@/assets/newsletter/icon-list.svg";
-import successIcon from "@/assets/newsletter/icon-success.svg";
 import desktopImage from "@/assets/newsletter/illustration-sign-up-desktop.svg";
 import mobileImage from "@/assets/newsletter/illustration-sign-up-mobile.svg";
 import Image from "next/image";
-import { emailSchema, subscribeSchema } from "@/lib/validators/newsletter";
+import { subscribeSchema } from "@/lib/validators/newsletter";
 import { useFormik } from "formik";
 import { useState } from "react";
 import { toFormikValidationSchema } from "zod-formik-adapter";
+import SuccessDesktopNotification from "@/components/newsletter/SuccessDesktop";
 
 function Newsletter() {
   const [isLoading, setIsLoading] = useState<boolean>(false);
+  const [isSuccess, setIsSuccess] = useState<boolean>(false);
+
   type FormValues = {
     email: string;
   };
@@ -21,6 +23,7 @@ function Newsletter() {
       await new Promise((resolve) => setTimeout(resolve, 3000));
       console.log(values.email);
       setIsLoading(false);
+      setIsSuccess(true);
     },
 
     validationSchema: toFormikValidationSchema(subscribeSchema),
@@ -38,7 +41,7 @@ function Newsletter() {
         <Image src={mobileImage} alt="image showing sign in" />
       </section>
       <section className="flex min-w-[60%] flex-1 flex-col justify-center gap-5 px-5">
-        <h1 className="mt-4 font-roboto text-3xl font-bold">Stay Updated!</h1>
+        <h1 className="mt-4 text-3xl font-bold">Stay Updated!</h1>
         <p className="text-sm">
           Join 60,000+ product managers receiving monthly updates on:
         </p>
@@ -87,6 +90,8 @@ function Newsletter() {
             disabled={setButtonInvalid()}
             className={`mt-2 h-12 w-full scale-100 transform cursor-pointer rounded-lg bg-newsletterColors-dark-slate-grey text-sm font-bold text-newsletterColors-white duration-300 focus:scale-105 ${
               setButtonInvalid() ? "opacity-80" : "undefined"
+            } ${
+              isLoading ? "bg-newsletterColors-tomato opacity-80" : "undefined"
             }`}
           >
             Subscribe to monthly newsletter
@@ -100,6 +105,14 @@ function Newsletter() {
           className="w-fill h-auto lg:flex"
         />
       </section>
+      {isSuccess && (
+        <div className="fixed left-0 top-0 hidden h-[100vh] w-[100vw] items-center justify-center bg-newsletterColors-grey sm:flex">
+          <SuccessDesktopNotification
+            email={formik.values.email}
+            setShowModal={setIsSuccess}
+          />
+        </div>
+      )}
     </main>
   );
 }
