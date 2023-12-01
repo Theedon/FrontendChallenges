@@ -6,7 +6,7 @@ function QRComponent() {
     <main className="flex min-h-[60vh] w-[38vh] flex-col gap-3 rounded-2xl border border-none bg-qrColors-white p-3 shadow-2xl">
       <Image
         // className="min-h-40 w-full rounded-2xl"
-        className="min-h-40 w-full scale-100 transform rounded-2xl transition-transform duration-300 duration-300 ease-in-out hover:scale-105"
+        className="min-h-40 w-full scale-100 transform rounded-2xl transition-transform duration-300 ease-in-out hover:scale-105"
         src={QRCode}
         alt="QRCode"
       ></Image>

@@ -7,9 +7,13 @@ import { subscribeSchema } from "@/lib/validators/newsletter";
 import { useFormik } from "formik";
 import { useState } from "react";
 import { toFormikValidationSchema } from "zod-formik-adapter";
+import SuccessMobileNotification from "@/components/newsletter/SuccessMobile";
+
 import SuccessDesktopNotification from "@/components/newsletter/SuccessDesktop";
+import { useRouter } from "next/navigation";
 
 function Newsletter() {
+  const router = useRouter();
   const [isLoading, setIsLoading] = useState<boolean>(false);
   const [isSuccess, setIsSuccess] = useState<boolean>(false);
 
@@ -106,8 +110,16 @@ function Newsletter() {
         />
       </section>
       {isSuccess && (
-        <div className="fixed left-0 top-0 hidden h-[100vh] w-[100vw] items-center justify-center bg-newsletterColors-grey sm:flex">
+        <div className="fixed left-0 top-0 hidden h-[100vh] w-[100vw] items-center justify-center bg-newsletterColors-grey sm:flex ">
           <SuccessDesktopNotification
+            email={formik.values.email}
+            setShowModal={setIsSuccess}
+          />
+        </div>
+      )}
+      {isSuccess && (
+        <div className="fixed left-0 top-0 flex h-[100vh] w-[100vw] items-center justify-center bg-newsletterColors-grey sm:hidden">
+          <SuccessMobileNotification
             email={formik.values.email}
             setShowModal={setIsSuccess}
           />
