@@ -4,7 +4,7 @@ const roboto = Roboto({ weight: ["400", "700"], subsets: ["cyrillic"] });
 function NewsLetterLayout({ children }: { children: ReactNode }) {
   return (
     <div
-      className={`${roboto.className} flex h-[100vh] w-full items-center justify-center`}
+      className={`${roboto.className} flex w-full sm:h-[100vh] sm:items-center sm:justify-center`}
     >
       {children}
     </div>

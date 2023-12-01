@@ -33,9 +33,12 @@ function Newsletter() {
     return false;
   };
   return (
-    <main className="flex max-h-[70vh] max-w-[100vh] rounded-2xl font-roboto">
+    <main className="flex flex-col rounded-2xl font-roboto sm:max-h-[70vh] sm:max-w-[100vh] sm:flex-row ">
+      <section className="flex flex-1 sm:hidden">
+        <Image src={mobileImage} alt="image showing sign in" />
+      </section>
       <section className="flex min-w-[60%] flex-1 flex-col justify-center gap-5 px-5">
-        <h1 className="font-roboto text-3xl font-bold ">Stay Updated!</h1>
+        <h1 className="mt-4 font-roboto text-3xl font-bold">Stay Updated!</h1>
         <p className="text-sm">
           Join 60,000+ product managers receiving monthly updates on:
         </p>
@@ -73,7 +76,7 @@ function Newsletter() {
             id="email"
             className={`h-12 w-full transform rounded-lg border border-newsletterColors-grey p-2 text-sm outline-none duration-300 hover:scale-x-105  focus:bg-qrColors-light-gray ${
               formik.touched.email && formik.errors.email
-                ? "border-newsletterColors-tomato bg-[#FFE8E6] placeholder:text-newsletterColors-dark-slate-grey"
+                ? "border-newsletterColors-tomato bg-[#FFE8E6] "
                 : undefined
             }`}
             placeholder="email@company.com"
@@ -90,11 +93,11 @@ function Newsletter() {
           </button>
         </form>
       </section>
-      <section className="flex-1">
+      <section className="hidden flex-1 sm:flex">
         <Image
           src={desktopImage}
           alt="image showing sign in"
-          className="w-fill min-h-[80vh] lg:flex"
+          className="w-fill h-auto lg:flex"
         />
       </section>
     </main>

@@ -8,15 +8,16 @@ const config: Config = {
   ],
   theme: {
     extend: {
+      screens: {
+        sm: "375px", //small Mobile
+        lg: "1440px", //Desktop
+      },
       fontFamily: {
         outfit: ["Outfit", "sans-serif"],
         roboto: ["Roboto", "sans-serif"],
       },
     },
-    screens: {
-      sm: "375px", //Mobile
-      lg: "1440px", //Desktop
-    },
+
     colors: {
       qrColors: {
         white: "hsl(0, 0%, 100%)",
