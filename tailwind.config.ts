@@ -15,6 +15,7 @@ const config: Config = {
       fontFamily: {
         outfit: ["Outfit", "sans-serif"],
         roboto: ["Roboto", "sans-serif"],
+        rubik: ["var(--font-rubik)"],
       },
     },
 
@@ -32,6 +33,13 @@ const config: Config = {
         "dark-slate-grey": "hsl(234, 29%, 20%)",
         "charcoal-grey": "hsl(235, 18%, 26%)",
         white: "hsl(0, 0%, 100%)",
+      },
+      blandingColors: {
+        sBlue: "hsl(231, 69%, 60%)",
+        sRed: "hsl(0, 94%, 66%)",
+
+        gBlue: "hsl(229, 8%, 60%)",
+        dBlue: "hsl(229, 31%, 21%)",
       },
     },
   },
