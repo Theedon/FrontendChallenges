@@ -1,9 +1,5 @@
 function BlandingPage() {
-  return (
-    <div>
-      <div className="font-rubik text-base">Hello World</div>
-    </div>
-  );
+  return <main className="flex flex-col gap-5"></main>;
 }
 
 export default BlandingPage;
