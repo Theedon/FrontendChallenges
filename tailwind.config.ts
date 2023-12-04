@@ -40,6 +40,7 @@ const config: Config = {
 
         gBlue: "hsl(229, 8%, 60%)",
         dBlue: "hsl(229, 31%, 21%)",
+        white: "hsl(0, 0%, 100%)",
       },
     },
   },
