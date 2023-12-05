@@ -11,10 +11,10 @@ function QRComponent() {
         alt="QRCode"
       ></Image>
       <section className="flex flex-col gap-3 p-2">
-        <h1 className="font-outfit text-lg text-center font-bold">
+        <h1 className="text-center font-outfit text-lg font-bold">
           Improve your front-end skills by building projects
         </h1>
-        <p className="font-outfit text-sm text-center">
+        <p className="text-center font-outfit text-sm">
           Scan the QR code to visit Frontend Mentor and take your coding skills
           to the next level
         </p>
