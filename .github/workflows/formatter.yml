@@ -1,19 +1,20 @@
-name: Linter
+name: Formatter
 
 on:
   push:
     branches:
       - "*"
+      - "!main"
 
 jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout repository
+      - name: Checkout
         uses: actions/checkout@v3
 
       - name: Install dependencies
         run: npm install
 
-      - name: Linter
+      - name: Format
         run: npm run lint
