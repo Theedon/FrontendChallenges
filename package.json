@@ -12,7 +12,9 @@
   },
   "dependencies": {
     "formik": "^2.4.5",
+    "lucide-react": "^0.294.0",
     "next": "14.0.1",
+    "rc-drawer": "^6.5.2",
     "react": "^18",
     "react-dom": "^18",
     "zod": "^3.22.4"
@@ -22,12 +24,15 @@
     "@types/react": "^18",
     "@types/react-dom": "^18",
     "autoprefixer": "^10.0.1",
+    "class-variance-authority": "^0.7.0",
+    "clsx": "^2.0.0",
     "eslint": "^8",
     "eslint-config-next": "14.0.1",
     "eslint-config-prettier": "^9.0.0",
     "postcss": "^8",
     "prettier": "^3.1.0",
     "prettier-plugin-tailwindcss": "^0.5.7",
+    "tailwind-merge": "^2.1.0",
     "tailwindcss": "^3.3.0",
     "typescript": "^5",
     "zod-formik-adapter": "^1.2.0"
