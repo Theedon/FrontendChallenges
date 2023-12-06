@@ -46,4 +46,6 @@ const Button: FC<ButtonProps> = forwardRef(
     );
   },
 );
+
+Button.displayName = "Button";
 export default Button;

@@ -7,8 +7,8 @@ function DownloadsSection() {
       <section className="mx-auto flex flex-col items-center justify-center gap-5 justify-self-center md:max-w-md">
         <h3 className="text-2xl font-semibold">Download the extension</h3>
         <p className="text-md text-center text-blandingColors-gBlue">
-          We've got more browsers in the pipeline. Please do let us know if
-          you've got a favourite you'd like us to prioritize.
+          We&apos;ve got more browsers in the pipeline. Please do let us know if
+          you&apos;ve got a favourite you&apos;d like us to prioritize.
         </p>
       </section>
 
