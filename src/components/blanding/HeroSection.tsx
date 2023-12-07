@@ -14,13 +14,13 @@ function HeroSection() {
           A clean and simple interface to organize your favourite websites. Open
           a new browser tab and see your sites load instantly. Try it for free.
         </p>
-        <div className="flex items-center justify-between gap-3 md:items-start">
-          <Button size="medium" variant="info">
+        <div className="flex flex-col items-center justify-start gap-3 sm:flex-row md:items-start">
+          <Button size="full" variant="info">
             Get it on Chrome
           </Button>
           <Button
-            size="medium"
-            className="border-blandingColors-dBlue bg-newsletterColors-white text-[#000]"
+            size="full"
+            className=" border-blandingColors-dBlue bg-newsletterColors-white text-[#000]"
           >
             Get it on Firefox
           </Button>
@@ -32,6 +32,7 @@ function HeroSection() {
           src={illustration_hero}
           alt="illustration_hero"
           className="z-[1000]"
+          priority
         />
         <Image
           className="absolute bottom-0 right-0 z-[-1] max-h-[70%] w-[90%] translate-x-1/4 translate-y-[10%]"

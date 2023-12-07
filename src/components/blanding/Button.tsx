@@ -11,7 +11,7 @@ const buttonVariants = cva(
         primary: "bg-blandingColors-sRed ",
         info: "bg-blandingColors-sBlue ",
         navigation:
-          "bg-none text-blandingColors-black shadow-none text-md font-medium rounded-none border-none",
+          "font-semibold bg-none text-blandingColors-white shadow-none text-md  rounded-none border-none",
       },
       size: {
         small: "px-3 h-10",

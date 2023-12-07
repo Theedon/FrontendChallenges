@@ -14,15 +14,12 @@ function BrowserCard({
   minimumVersion,
   indexMargin,
 }: BrowserCardProps) {
-  const mediaQueryStyles = {
-    "@media (min-width: 640px)": {
-      marginTop: indexMargin ? `${indexMargin * 5}%` : 0,
-    },
-  } as React.CSSProperties;
   return (
     <div
-      className={`mx-5 mb-2 flex h-fit w-fit flex-col items-center gap-6 rounded-2xl border-blandingColors-dBlue p-2 shadow-2xl `}
-      style={mediaQueryStyles}
+      className={`mx-5 mb-2 flex h-fit w-fit flex-col items-center gap-6 rounded-2xl border-blandingColors-dBlue p-2 shadow-2xl`}
+      style={{
+        marginTop: indexMargin ? `${indexMargin * 5}%` : 0,
+      }}
     >
       <Image src={browserLogoUrl} alt={browserName} />
       <h3 className="font-semibold">{`Add to ${browserName}`}</h3>
