@@ -15,15 +15,24 @@ function Navbar() {
   return (
     <nav className="fixed top-0 z-10 flex w-full bg-opacity-20 p-5 backdrop-blur-md md:justify-between">
       <div className="min-w-10 flex-1">
-        <Image src={bookmark_logo} alt="bookmark logo" />
+        <Image
+          src={bookmark_logo}
+          alt="bookmark logo"
+          className={`z-50 filter  ${menuOpen ? "invert" : ""}`}
+        />
       </div>
 
       <div>
-        <Menu className="z-50 cursor-pointer md:hidden" onClick={toggleMenu} />
+        <Menu
+          className={`z-50 cursor-pointer md:hidden ${
+            menuOpen ? "text-blandingColors-white" : ""
+          }`}
+          onClick={toggleMenu}
+        />
         <section
           className={`${
-            menuOpen ? "flex " : "hidden "
-          } fixed inset-0 z-[-1] h-[100vh] w-[100vw] transform flex-col justify-center gap-5 bg-blandingColors-sBlue opacity-90 backdrop-blur-md transition-transform duration-300 ease-in-out md:hidden`}
+            menuOpen ? "flex" : "hidden"
+          } fixed inset-0 z-[-1] h-[100vh] w-[100vw] transform flex-col justify-center gap-5 bg-blandingColors-sBlue text-lg  opacity-90 backdrop-blur-md transition-transform duration-300 ease-in-out md:hidden`}
         >
           <Button variant="navigation">FEATURES</Button>
           <Button variant="navigation">PRICING</Button>

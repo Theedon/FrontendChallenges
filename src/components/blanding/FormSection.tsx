@@ -46,12 +46,13 @@ function FormSection() {
                 : ""
             }`}
           />
-          <p className="flex items-center gap-1 text-sm  text-blandingColors-sRed">
-            {formik.errors.email && (
+          {formik.touched.email && formik.errors.email && (
+            <p className="flex items-center gap-1 text-sm  text-blandingColors-sRed">
               <AlertCircle className="text-blandingColors-sRed" />
-            )}
-            {formik.touched.email && formik.errors.email}
-          </p>
+
+              {formik.touched.email && formik.errors.email}
+            </p>
+          )}
         </div>
 
         <Button
